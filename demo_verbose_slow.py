@@ -85,7 +85,7 @@ if __name__ == "__main__":
         else:
             state.add_validator_to_pool(reserve_validator_id)
             state.add_to_decommission_queue(reserve_validator_id)
-            print("** Alice triggers_reshuffle")
+            print("** Alice triggers reshuffle")
             state.print_pending_state()
         # Block gets mined
         state.produce_block()
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     # Print the setup and the results
     print(f"Running with {organic_validator_count} organic validators and {alice_count} Alice validators")
     print(f"(Alice has {100 * alice_count / (organic_validator_count + alice_count):.2f}% of the stake)")
+    print(f"Without shuffle grinding, Alice won {fair_wins} blocks out of {mine_depth} ({100 * fair_wins / mine_depth:.2f}%)")
     print(
-        f"Without shuffle grinding, Alice won {fair_wins} blocks out of {mine_depth} ({100 * fair_wins / mine_depth:.2f}%)")
-    print(
-        f"With shuffle grinding, Alice won {grinding_wins} blocks out of {mine_depth} ({100 * grinding_wins / mine_depth:.2f}%)")
+        f"With shuffle grinding, Alice won {grinding_wins} blocks out of {mine_depth} ({100 * grinding_wins / mine_depth:.2f}%)"
+    )
